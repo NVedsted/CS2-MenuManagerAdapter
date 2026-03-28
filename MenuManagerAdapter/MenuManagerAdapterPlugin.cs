@@ -7,7 +7,7 @@ namespace MenuManagerAdapter;
 public class MenuManagerAdapterPlugin : BasePlugin
 {
     public override string ModuleName => "Menu Manager Adapter";
-    public override string ModuleVersion => "0.0.0";
+    public override string ModuleVersion => "0.0.1";
     public override string ModuleAuthor => "Nicklas Vedsted";
     public override string ModuleDescription => "Makes plugins built on top of MenuManagerCS2 use CS2MenuManagerer instead.";
 

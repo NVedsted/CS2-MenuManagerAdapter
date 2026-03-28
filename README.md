@@ -11,9 +11,21 @@ use [CS2MenuManager](https://github.com/schwarper/CS2MenuManager) instead.
 
 ## Installation
 
-1. Remove MenuManagerCS2 if installed already
-2. Install CS2MenuManager if not already installed
-3. Install MenuManagerAdapter
+1. If MenuManagerCS2 is already installed, remove its folder in `plugins` (do not delete its folder in `shared`).
+2. Otherwise, download the latest version of MenuManagerCS2 and install the contents of its `shared` folder.
+3. Install CS2MenuManager if not already installed
+4. Install MenuManagerAdapter & MenuManagerCore plugins
+
+**Expected file structure:**
+```
++---plugins
+|   +---CS2MenuManager_MenuManager (original from CS2MenuManager)
+|   +---MenuManagerAdapter (this plugin)
+|   \---MenuManagerCore (fake plugin)
+\---shared
+    +---CS2MenuManager (original from CS2MenuManager)
+    \---MenuManagerApi (original from MenuManagerCS2)
+```
 
 ## Limitations
 
@@ -26,3 +38,5 @@ use [CS2MenuManager](https://github.com/schwarper/CS2MenuManager) instead.
 
 Plugins using MenuManagerCS2 rely on a `PluginCapability` that provides an `IMenuApi`. This plugin provides an
 alternative implementation of `IMenuApi` that forwards to CS2MenuManager.
+
+To play nicely with plugins that check if `MenuManagerCore` is present in the filesystem, a fake plugin is created that does nothing and can be placed to silence errors.

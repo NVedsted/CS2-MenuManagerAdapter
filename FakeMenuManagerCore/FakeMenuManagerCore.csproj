@@ -4,20 +4,11 @@
         <TargetFramework>net8.0</TargetFramework>
         <ImplicitUsings>enable</ImplicitUsings>
         <Nullable>enable</Nullable>
+        <AssemblyName>MenuManagerCore</AssemblyName>
     </PropertyGroup>
-
-    <ItemGroup>
-        <Reference Include="MenuManagerApi">
-            <HintPath>../libs/MenuManagerApi.dll</HintPath>
-            <Private>false</Private>
-        </Reference>
-    </ItemGroup>
-
+    
     <ItemGroup>
         <PackageReference Include="CounterStrikeSharp.API" Version="1.0.364">
-            <IncludeAssets>compile</IncludeAssets>
-        </PackageReference>
-        <PackageReference Include="CS2MenuManager" Version="1.0.42">
             <IncludeAssets>compile</IncludeAssets>
         </PackageReference>
     </ItemGroup>
